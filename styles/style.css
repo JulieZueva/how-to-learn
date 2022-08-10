@@ -14,6 +14,8 @@
   min-height: 600px;
   max-height: 756px;
   background-color: #f2f2f2;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header__title {
@@ -28,8 +30,6 @@
   margin: 0;
   margin-block-start: 0;
   margin-block-end: 0;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .logo {
@@ -53,8 +53,8 @@
   bottom: 30px;
   left: 64px;
   z-index: 10;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .header__link {
@@ -117,6 +117,9 @@
   margin-block-end: 0;
   margin-bottom: 30px;
 }
+.two-columns__paragraph:last-child {
+  margin-bottom: 0;
+}
 
 .two-columns__main-text {
   width: 80%;
@@ -168,21 +171,19 @@
   align-items: baseline;
   margin-block-start: 0;
   margin-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
   width: 1100px;
   z-index: 10;
 }
 
 .table__cell {
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
   list-style-type: none;
 }
 
-.table__cell_theme_white {
+.table__cell_theme_light {
   width: 250px;
-  padding-top: 60px;
+  margin-top: 60px;
 }
 
 .table__heading {
@@ -191,7 +192,6 @@
   font-weight: 600;
   margin-block-start: 0;
   margin-block-end: 0;
-  margin-bottom: 20px;
 }
 
 .table__text {
@@ -199,7 +199,6 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  margin-block-start: 0;
   margin-block-end: 0;
 }
 
@@ -220,7 +219,7 @@
 
 .feynman__title {
   position: relative;
-  width: 648px;
+  max-width: 648px;
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
@@ -235,7 +234,7 @@
 
 }
 
-.feyman__subtitle {
+.feynman__subtitle {
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -246,7 +245,7 @@
   margin-right: auto;
 }
 
-.feyman__link {
+.feynman__link {
   position: absolute;
   line-height: 51px;
   font-size: 36px;
@@ -259,36 +258,25 @@
   color: #2f80ed;
 }
 
-.feynman__photo {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
 /* блок Kaufman */
 
 .kaufman {
   background-color: #1f1f1f;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   padding-bottom: 90px;
   padding-top: 90px;
   overflow: hidden;
-  z-index: 1;
   color: #f2f2f2;
-  background-image: url("../images/kaufman-triangle.svg");
-  background-repeat: no-repeat;
-  background-position: right -210px top 0;
-  background-size: 877px 877px;
+  box-sizing: border-box;
 
 }
 
 .table__cell_theme_dark {
   width: 200px;
   color: #f2f2f2;
-  margin-block-start: 0;
-  margin-block-end: 0;
   margin-top: 80px;
   z-index: 10;
 }
@@ -296,6 +284,14 @@
 .kaufman__triangle {
   position: absolute;
   z-index: 5;
+  background-image: url("/images/kaufman-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  right:-210px;
+  top: 0;
+  bottom: 90px;
+  width: 877px;
+  height: 877px;
 }
 
 /* блок Footer */
@@ -311,16 +307,20 @@
 
 .footer__columns {
   display: flex;
-  justify-content: space-between;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   min-height: 250px;
+  justify-content: space-between;
 }
 
 .footer__column_content_copyright {
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
   flex-basis: 711px;
+  margin: 0;
+  min-width: 45%;
 }
 
 .logo_place_footer {
@@ -342,7 +342,8 @@
   margin-block-start: 0;
   margin-block-end: 0;
   flex-direction: column;
-  align-items: flex-end;
+  min-width: auto;
+  margin: 0;
 }
 
 .footer__column_content_social {
@@ -350,7 +351,9 @@
   margin-block-start: 0;
   margin-block-end: 0;
   flex-direction: column;
-  align-items: flex-end;
+  flex-basis: auto;
+  margin: 0;
+  min-width: auto;
 }
 
 .footer__column-heading {
@@ -371,21 +374,18 @@
   list-style-type: none;
   margin-bottom: 16px;
   color: #f2f2f2;
+  padding-inline-start: 0;
 }
 
 .footer__column-link {
-  bottom: 16px;
-  margin-block-start: 0;
-  margin-block-end: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
-  list-style-type: none;
   color: #f2f2f2;
   text-decoration: none;
 }
 
-.footer_social-icon {
+.footer__social-icon {
   height: 16px;
   width: 16px;
   margin-right: 10px;
