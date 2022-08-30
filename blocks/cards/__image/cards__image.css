@@ -1,0 +1,9 @@
+.cards__image {
+  display: flex;
+  border-radius: 50%;
+  padding: 60px 40px 43px;
+  z-index: 5;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+}
