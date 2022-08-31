@@ -8,4 +8,5 @@
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  z-index: 1;
 }

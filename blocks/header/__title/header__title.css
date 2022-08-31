@@ -2,12 +2,10 @@
   display: flex;
   position: relative;
   max-width: 730px;
-  left: 64px;
+  padding-left: 64px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
-  z-index: 50;
   margin: 0;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin-block: 0;
 }

@@ -1,8 +1,7 @@
-.two-columns__brief {
+.table__text {
+  margin-top: 20px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  max-width: 175px;
-  color: #2f80ed;
   margin-block: 0;
 }

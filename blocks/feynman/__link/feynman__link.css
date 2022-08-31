@@ -4,14 +4,13 @@
   font-size: 36px;
   right: 48px;
   font-weight: normal;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin-block: 0;
   top: 50%;
   text-decoration: none;
   color: #2f80ed;
+  transition: color 1s linear 2s;
 }
 
 .feynman__link:hover {
   opacity: 0.5;
-  transition: ease;
 }
